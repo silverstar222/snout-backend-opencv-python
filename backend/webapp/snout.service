@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn daemon for Snout
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/snoutscan/backend/webapp
+ExecStart=/home/ubuntu/snoutscan/backend/webapp/env/bin/gunicorn --workers 2 --bind :5000 main:app
+
+[Install]
+WantedBy=multi-user.target
+

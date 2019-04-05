@@ -1,0 +1,10 @@
+runtime: custom
+env: flex
+
+
+#[START cloudsql_settings]
+# Replace project and instance with the values obtained  when configuring your
+# Cloud SQL instance.
+beta_settings:
+    cloud_sql_instances: snout-cloud:us-central1:snoutscandb
+#[END cloudsql_settings]
